@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import random from '../libs/random.js';
 import playBrainGame from '../index.js';
 
 const question = 'What number is missing in the progression?';
@@ -15,15 +15,15 @@ const generateArithmeticProgression = (progressionStart, progressionStep, progre
 
 const generateRound = () => {
   const round = {};
-  const progressionStart = _.random(50);
-  const progressionStep = _.random(2, 10);
-  const progressionLength = _.random(5, 10);
+  const progressionStart = random(0, 50);
+  const progressionStep = random(2, 10);
+  const progressionLength = random(5, 10);
   const progression = generateArithmeticProgression(
     progressionStart,
     progressionStep,
     progressionLength,
   );
-  const emptyPositionIndex = _.random(progression.length - 1);
+  const emptyPositionIndex = random(0, progression.length - 1);
 
   round.correctAnswer = progression[emptyPositionIndex].toString();
   progression[emptyPositionIndex] = '..';

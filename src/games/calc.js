@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import random from '../libs/random.js';
 import playBrainGame from '../index.js';
 
 const question = 'What is the result of the expression?';
@@ -11,10 +11,10 @@ const calculate = (firstNum, secondNum, operationIndex) => {
 
 const generateRound = () => {
   const round = {};
-  const operationIndex = _.random(2);
+  const operationIndex = random(0, 2);
   const operationTypes = ['+', '-', '*'];
-  const firstNum = _.random(100);
-  const secondNum = _.random(100);
+  const firstNum = random();
+  const secondNum = random();
 
   round.question = `${firstNum} ${operationTypes[operationIndex]} ${secondNum}`;
   round.correctAnswer = calculate(firstNum, secondNum, operationIndex).toString();

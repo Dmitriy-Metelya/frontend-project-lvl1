@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import random from '../libs/random.js';
 import playBrainGame from '../index.js';
 
 const question = 'Find the greatest common divisor of given numbers.';
@@ -23,8 +23,8 @@ const getGreatestCommonDivisor = (firstNum, secondNum) => {
 
 const generateRound = () => {
   const round = {};
-  const firstNum = _.random(-100, 100);
-  const secondNum = _.random(-100, 100);
+  const firstNum = random(-100);
+  const secondNum = random(-100);
 
   round.question = `${firstNum} ${secondNum}`;
   round.correctAnswer = getGreatestCommonDivisor(firstNum, secondNum).toString();
