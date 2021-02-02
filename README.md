@@ -1,4 +1,12 @@
-The Brain Games is a new outstanding collection of console computer games to make your brain work and develop. Type 'npm i @hexlet/code' in command line to install. Latest version includes:
+The Brain Games is a new outstanding collection of console computer games to make your brain work and develop.
+
+Installation:
+
+1. Run 'git clone git@github.com:Dmitriy-Metelya/frontend-project-lvl1.git' in command line to install the repository. frontend-project-lvl1 directory should appear in your working directory. Enter it.
+2. Run 'npm ci'.
+3. Run 'npm link'.
+
+Latest version includes:
 
 1. Brain Even - answer whether numbers are even or not. Type 'brain-even' in the command line, push 'Enter' and enjoy.
 2. Brain Calc - test your adding, subtraction and multiplying skills. Run 'brain-calc' from the command line.
