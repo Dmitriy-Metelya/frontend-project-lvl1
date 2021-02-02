@@ -4,12 +4,8 @@ import playBrainGame from '../index.js';
 const question = 'Find the greatest common divisor of given numbers.';
 
 const getGreatestCommonDivisor = (firstNum, secondNum) => {
-  if (firstNum === 0 || secondNum === 0) {
-    return Math.max(Math.abs(firstNum), Math.abs(secondNum));
-  }
-
-  let a = Math.max(Math.abs(firstNum), Math.abs(secondNum));
-  let b = Math.min(Math.abs(firstNum), Math.abs(secondNum));
+  let a = Math.max(firstNum, secondNum);
+  let b = Math.min(firstNum, secondNum);
   let remainder = a % b;
 
   while (remainder !== 0) {
@@ -23,8 +19,8 @@ const getGreatestCommonDivisor = (firstNum, secondNum) => {
 
 const generateRound = () => {
   const round = {};
-  const firstNum = random(-100);
-  const secondNum = random(-100);
+  const firstNum = random(1);
+  const secondNum = random(1);
 
   round.question = `${firstNum} ${secondNum}`;
   round.correctAnswer = getGreatestCommonDivisor(firstNum, secondNum).toString();
