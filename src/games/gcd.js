@@ -5,7 +5,7 @@ const question = 'Find the greatest common divisor of given numbers.';
 
 const getGreatestCommonDivisor = (firstNum, secondNum) => {
   if (firstNum === 0 || secondNum === 0) {
-    return 1;
+    return Math.max(Math.abs(firstNum), Math.abs(secondNum));
   }
 
   let a = Math.max(Math.abs(firstNum), Math.abs(secondNum));
