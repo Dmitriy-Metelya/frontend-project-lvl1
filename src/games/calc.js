@@ -18,7 +18,7 @@ const generateRound = () => {
   const firstNum = random();
   const secondNum = random();
   const operationTypes = ['+', '-', '*'];
-  const operationIndex = random(0, operationTypes.length);
+  const operationIndex = random(0, operationTypes.length - 1);
 
   round.question = `${firstNum} ${operationTypes[operationIndex]} ${secondNum}`;
   round.correctAnswer = calculate(firstNum, secondNum, operationTypes[operationIndex]).toString();
