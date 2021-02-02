@@ -15,8 +15,8 @@ const calculate = (
 
 const generateRound = () => {
   const round = {};
-  const firstNum = random();
-  const secondNum = random();
+  const firstNum = random(0, 100);
+  const secondNum = random(0, 100);
   const operationTypes = ['+', '-', '*'];
   const operationIndex = random(0, operationTypes.length - 1);
 

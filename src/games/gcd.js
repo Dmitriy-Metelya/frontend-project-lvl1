@@ -19,8 +19,8 @@ const getGreatestCommonDivisor = (firstNum, secondNum) => {
 
 const generateRound = () => {
   const round = {};
-  const firstNum = random(1);
-  const secondNum = random(1);
+  const firstNum = random(1, 100);
+  const secondNum = random(1, 100);
 
   round.question = `${firstNum} ${secondNum}`;
   round.correctAnswer = getGreatestCommonDivisor(firstNum, secondNum).toString();

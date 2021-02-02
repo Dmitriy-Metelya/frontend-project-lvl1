@@ -8,7 +8,7 @@ const isEven = (num) => !(num % 2);
 const generateRound = () => {
   const round = {};
 
-  round.question = random();
+  round.question = random(0, 100);
   round.correctAnswer = isEven(round.question) ? 'yes' : 'no';
 
   return round;

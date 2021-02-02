@@ -19,7 +19,7 @@ const isPrime = (num) => {
 
 const generateRound = () => {
   const round = {};
-  const number = random();
+  const number = random(0, 100);
 
   round.question = number;
   round.correctAnswer = isPrime(number) ? 'yes' : 'no';
